@@ -22,6 +22,9 @@ google-cloud-storage
 mlflow
 s3fs
 
+# webpage
+streamlit
+
 # utilities
 six>=1.14
 joblib
