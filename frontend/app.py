@@ -1,10 +1,20 @@
+from google.cloud import storage
+
 import streamlit as st
 import requests
-import numpy as np
-from PIL import Image
-import joblib
-import base64
 
+BUCKET_NAME = 'wagon-data-745-project-yoda'
+DESTINATION_BLOB_NAME = 'images/image.jpg'
+
+
+def upload_blob(file):
+    """Uploads a file to the bucket."""
+
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(BUCKET_NAME)
+    blob = bucket.blob(DESTINATION_BLOB_NAME)
+
+    blob.upload_from_file(file)
 
 st.header('Project Yoda ')
 
@@ -14,15 +24,13 @@ test_image = st.file_uploader(label="Choose a file", type=['jpg','png'])
 
 if test_image != None:
     st.image(test_image)
-    test_image_bytes = base64.b64encode(test_image.read()) # encoding the image to base64
-    post_object = {'image': test_image_bytes} # creating post object
-
+    upload_blob(test_image)
 
 
 # Post request to prediction api
 
 if st.button('Classify me!'):
     st.balloons()
-    result = requests.post('https://projectyoda-zl47dkr23a-ew.a.run.app/predict', data=post_object)
+    result = requests.get('https://projectyoda-zl47dkr23a-ew.a.run.app/predict')
     result = result.json()
     st.write(result['prediction'])
