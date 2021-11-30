@@ -74,7 +74,7 @@ docker_build_m1:
 # select project ID and give an image name
 
 docker_build_intel:
-	docker build --platform linux/amd64 -t eu.gcr.io/project-yoda-333014/project_yoda_frontend .
+	docker build -t eu.gcr.io/project-yoda-333014/project_yoda_frontend .
 
 # run the docker image locally to double check that it's working, terminate the run before using docker_push
 # select project ID and give an image name

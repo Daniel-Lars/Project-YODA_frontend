@@ -3,4 +3,4 @@ FROM python:3.8.12-buster
 COPY frontend /frontend
 COPY requirements.txt /requirements.txt
 RUN pip install -r requirements.txt
-CMD streamlit run --server.port 8080 --server.enableCORS false frontend/app.py
+CMD streamlit run --server.port 8080 --server.enableCORS=false frontend/app.py

@@ -26,6 +26,7 @@ s3fs
 
 # webpage
 streamlit
+google.cloud
 
 # utilities
 six>=1.14
