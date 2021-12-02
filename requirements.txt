@@ -4,13 +4,6 @@ setuptools>=26
 twine
 wheel>=0.29
 
-# data science
-numpy
-pandas
-scikit-learn
-Pillow
-google.cloud
-
 # tests/linter
 black
 coverage
@@ -21,7 +14,6 @@ yapf
 # API
 gcsfs
 google-cloud-storage
-mlflow
 s3fs
 
 # webpage
@@ -30,6 +22,6 @@ google.cloud
 
 # utilities
 six>=1.14
-joblib
-memoized-property
 termcolor
+Pillow
+google.cloud
