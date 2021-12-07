@@ -52,7 +52,7 @@ sudo apt-get install virtualenv python-pip python-dev
 deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
 ```
 
-Clone the project and install it:
+Clone the project and install it :
 
 ```bash
 git clone git@github.com:{group}/Project-YODA_frontend.git
