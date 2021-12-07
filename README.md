@@ -1,10 +1,6 @@
 # Data analysis
 - Document here the project: Project-YODA_frontend
-- Description: Project Description
-- Data Source:
-- Type of analysis:
-
-Please document the project the better you can.
+- Description: Frontend package for the Le Wagon graduation project Project-Yoda, which uses a CNN to classify LEGO minifigure images and generates new pictures utilizing a DCGAN. 
 
 # Startup the project
 
