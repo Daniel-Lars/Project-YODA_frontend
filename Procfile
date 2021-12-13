@@ -1,1 +1,1 @@
-web: pip install . -U && Pproject-yoda-run
+web: pip install . -U && streamlit run frontend/app.py
