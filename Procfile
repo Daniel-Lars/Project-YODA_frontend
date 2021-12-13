@@ -1,1 +1,1 @@
-web: pip install . -U && Project-YODA_frontend-run
+web: pip install . -U && Pproject-yoda-run
